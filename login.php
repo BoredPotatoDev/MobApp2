@@ -18,10 +18,10 @@
 		<h4>All Fields are <span>Required</span></h4>
 
 		<label>Family Name</label>
-		<input type="text" name="username">
+		<input type="text" name="FN">
 
 		<label>Student Number</label>
-		<input type="text" name="password">
+		<input type="text" name="SN">
 
         <label>Date of Birth</label>
         <input type="date" name="DoB">
