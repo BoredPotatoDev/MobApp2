@@ -31,7 +31,7 @@
 
         <button type="submit" name="submit">Register</button>
 
-        <p class="error"><?php echo @user->error ?></p>
-        <p class="success"><?php echo @user->success ?></p>
+        <p class="error"></p>
+        <p class="success"></p>
 </body>
 </html>

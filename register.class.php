@@ -4,7 +4,7 @@ class RegisterUser{
     private $FN;
     private $SN;
     private $DoB;
-    public $error:
+    public $error;
     public $success;
     private $storage = "login.json";
     private $stored_users;
@@ -26,7 +26,7 @@ class RegisterUser{
             "username" => $this->FN,
             "STDNTnumber" => $this->SN,
             "date" => $this->DoB,
-        ]
+        ];
 
         if($this->checkFieldValues()){
             $this->insertUser();
@@ -35,7 +35,7 @@ class RegisterUser{
 
     private function checkFieldValues(){
         if(empty($this->username) || empty($this->STDNTnumber) || empty($this->date)){
-            $this->error = "ALL FIELDS ARE REQUIRED"
+            $this->error = "ALL FIELDS ARE REQUIRED";
             return false;
         }else{
             return true;
@@ -56,9 +56,9 @@ class RegisterUser{
         if($this->udernameExist() == FALSE){
             array_push($this->stored_users, $this->new_user);
             if(file_put_contents($this->storage, json_encode($this->stored_users, JSON_PRETTY_PRINT))){
-                return $this->success = "You have been added to the database"
+                return $this->success = "You have been added to the database";
             }else
-                return $this->success = "Something went wrong"
+                return $this->success = "Something went wrong";
         }
     }
 }
