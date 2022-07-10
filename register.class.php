@@ -11,13 +11,13 @@ class RegisterUser{
     private $new_user;
 
     public function __construct($FN, $SN, $DoB){
-        $this->FN = trim(this->FN);
+        $this->FN = trim($this->FN);
         $this->username = filter_var($FN, FILTER_SANITIZED_STRING);
 
-        $this->SN = trim(this->FN);
+        $this->SN = trim($this->FN);
         $this->STDNTnumber = filter_var($SN, FILTER_SANITIZED_STRING);
 
-        $this->DoB = trim(this->FN);
+        $this->DoB = trim($this->FN);
         $this->date = filter_var($DoB, FILTER_SANITIZED_STRING);
 
         $this->stored_users = json_decode(file_get_contents($this->storage),true);
