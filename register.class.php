@@ -10,31 +10,32 @@ class RegisterUser{
     private $stored_users;
     private $new_user;
 
-    public function __construct($FN, $SN, $DoB){
-        $this->FN = trim($this->FN);
-        $this->username = filter_var($FN, FILTER_SANITIZED_STRING);
+	public function __construct($FN, $SN , $DoB){
 
-        $this->SN = trim($this->FN);
-        $this->STDNTnumber = filter_var($SN, FILTER_SANITIZED_STRING);
+		$this->FN = trim($this->FN);
+		$this->username = filter_var($FN, FILTER_SANITIZE_STRING);
 
-        $this->DoB = trim($this->FN);
-        $this->date = filter_var($DoB, FILTER_SANITIZED_STRING);
+		$this->SN = trim($this->SN);
+		$this->STDNTnumber = filter_var($SN, FILTER_SANITIZE_STRING);
 
-        $this->stored_users = json_decode(file_get_contents($this->storage),true);
+        $this->DoB = trim($this->DoB);
+		$this->Date_of_Birth = filter_var($DoB, FILTER_SANITIZE_STRING);
 
-        $this->new_user = [
-            "username" => $this->FN,
-            "STDNTnumber" => $this->SN,
-            "date" => $this->DoB,
-        ];
+		$this->stored_users = json_decode(file_get_contents($this->storage), true);
 
-        if($this->checkFieldValues()){
-            $this->insertUser();
-        }
-    }
+		$this->new_user = [
+			"username" => $this->FN,
+			"STDNTnumber" => $this->SN,
+            "Date_of_Birth" => $this->DoB,
+		];
+
+		if($this->checkFieldValues()){
+			$this->insertUser();
+		}
+	}
 
     private function checkFieldValues(){
-        if(empty($this->username) || empty($this->STDNTnumber) || empty($this->date)){
+        if(empty($this->username) || empty($this->STDNTnumber) || empty($this->Date_of_Birth)){
             $this->error = "ALL FIELDS ARE REQUIRED";
             return false;
         }else{
