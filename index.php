@@ -24,7 +24,7 @@
         <input type="text" name="FN">
 
         <label>Student Number</label>
-        <input type="number" name="SN">
+        <input type="text" name="SN">
 
         <label>Date of Birth</label>
         <input type="date" name="DoB">
