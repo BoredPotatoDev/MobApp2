@@ -1,32 +1,32 @@
 <?php
 
 class RegisterUser{
-    private $FN;
-    private $SN;
-    private $DoB;
+    private $FamilyName;
+    private $StudentNumber;
+    private $DateofBirth;
     public $error;
     public $success;
     private $storage = "login.json";
     private $stored_users;
     private $new_user;
 
-	public function __construct($FN, $SN , $DoB){
+	public function __construct($FamilyName, $StudentNumber, $DateofBirth){
 
-		$this->FN = trim($this->FN);
-		$this->username = filter_var($FN, FILTER_SANITIZE_STRING);
+		$this->FamilyName = trim($this->FamilyName);
+		$this->FamilyName = filter_var($FamilyName, FILTER_SANITIZE_STRING);
 
-		$this->SN = trim($this->SN);
-		$this->STDNTnumber = filter_var($SN, FILTER_SANITIZE_STRING);
+		$this->StudentNumber = trim($this->StudentNumber);
+        $this->StudentNumber = filter_var($StudentNumber, FILTER_SANITIZE_STRING);
 
-        $this->DoB = trim($this->DoB);
-		$this->Date_of_Birth = filter_var($DoB, FILTER_SANITIZE_STRING);
+        $this->DateofBirth = trim($this->DateofBirth);
+		$this->DateofBirth = filter_var($DateofBirth, FILTER_SANITIZE_STRING);
 
 		$this->stored_users = json_decode(file_get_contents($this->storage), true);
 
 		$this->new_user = [
-			"username" => $this->FN,
-			"STDNTnumber" => $this->SN,
-            "Date_of_Birth" => $this->DoB,
+			"Family Name" => $this->FamilyName,
+			"Student Number" => $this->StudentNumber,
+            "Date of Birth" => $this->DateofBirth,
 		];
 
 		if($this->checkFieldValues()){
@@ -35,7 +35,7 @@ class RegisterUser{
 	}
 
     private function checkFieldValues(){
-        if(empty($this->username) || empty($this->STDNTnumber) || empty($this->Date_of_Birth)){
+        if(empty($this->FamilyName) || empty($this->StudentNumber) || empty($this->DateofBirth)){
             $this->error = "ALL FIELDS ARE REQUIRED";
             return false;
         }else{
@@ -45,7 +45,7 @@ class RegisterUser{
 
     private function usernameExist(){
         foreach($this->stored_users as $user){
-            if($this->username == $user['username']){
+            if($this->FamilyName == $user['Family Name']){
                 $this->error = "You Already Have an Account!";
                 return true;
             }
