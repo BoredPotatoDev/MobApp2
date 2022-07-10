@@ -1,4 +1,4 @@
-<?php require("register.class.php")?>
+<?php require("register.class.php") ?>
 
 <?php
     if(isset($_POST['submit'])){
@@ -16,7 +16,6 @@
     <title>Register form</title>
 </head>
 <body>
-
     <form action="" method="post" enctype="multipart/form-data" autocomplete="off">
         <h2>Register form</h2>
         <h4>All fields are <span>required</span></h4>
