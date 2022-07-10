@@ -2,28 +2,28 @@
 
 class LoginUser{
     // class properties
-    private $username;
-    private $password;
+    private $FamilyName;
+    private $StudentNumber;
     public $error;
     public $success;
-    private $storage = "data.json";
+    private $storage = "login.json";
     private $stored_users;
 
 
     // class methods
-    public function __construct($username, $password){
-        $this->username = $username;
-        $this->password = $password;
+    public function __construct($FamilyName, $StudentNumber){
+        $this->FamilyName = $FamilyName;
+        $this->password = $StudentNumber;
         $this->stored_users = json_decode(file_get_contents($this->storage), true);
         $this->login();
     }
 
     private function login(){
         foreach($this->stored_users as $user) {
-            if($user['username'] == $this->username){
-                if(password_verify($this->password, $user['password'])){
+            if($user['FamilyName'] == $this->FamilyName){
+                if(password_verify($this->StudentNumber, $user['password'])){
                     session_start();
-                    $_SESSION['user'] = $this->username;
+                    $_SESSION['user'] = $this->FamilyName;
                     header("location: account.php"); exit();
                 }
             }
