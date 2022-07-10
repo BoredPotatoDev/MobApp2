@@ -22,7 +22,8 @@ class LoginUser{
     private function login(){
         foreach($this->stored_users as $user) {
             if($user['Family Name'] == $this->FamilyName){
-                if(password_verify($this->StudentNumber, $user['Student Number'])){
+
+                if($user['Student Number'] == $this->StudentNumber){
                     session_start();
                     $_SESSION['user'] = $this->FamilyName;
                     header("location: account.php"); exit();

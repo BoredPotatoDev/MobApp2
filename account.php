@@ -1,12 +1,12 @@
 <?php 
 	session_start();
 	if(!isset($_SESSION['FN'])){
-		header("location: login.php");	exit();
+		header("location: index.php");	exit();
 	}
 
 	if(isset($_GET['logout'])){
 		unset($_SESSION['FN']);
-		header("location: login.php");	exit();
+		header("location: index.php");	exit();
 	}
 
  ?>
