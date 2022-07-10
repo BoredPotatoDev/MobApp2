@@ -1,7 +1,7 @@
 <?php require("login.class.php") ?>
 <?php 
 	if(isset($_POST['submit'])){
-		$user = new LoginUser($_POST['username'], $_POST['password']);
+		$user = new LoginUser($_POST['FN'], $_POST['SN'], $_POST['DoB']);
 	}
 ?>
 <!DOCTYPE html>
@@ -15,13 +15,16 @@
 <body>
 	<form action="" method="post" enctype="multipart/form-data" autocomplete="off">
 		<h2>Login form</h2>
-		<h4>Both fields are <span>required</span></h4>
+		<h4>All Fields are <span>Required</span></h4>
 
-		<label>Username</label>
+		<label>Family Name</label>
 		<input type="text" name="username">
 
-		<label>Password</label>
+		<label>Student Number</label>
 		<input type="text" name="password">
+
+        <label>Date of Birth</label>
+        <input type="date" name="DoB">
 
 		<button type="submit" name="submit">Log in</button>
 
