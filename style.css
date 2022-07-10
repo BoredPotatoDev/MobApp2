@@ -1,145 +1,128 @@
-body {
-
-    background: #91a716;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    height: 100vh;
-
-    flex-direction: column;
-
-}
-
+/* I always reset all the html elements */
 *{
-
-    font-family: cursive;
-
-    box-sizing: padding-box;
-
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-form {
-
-    width: 1000px;
-
-    border: 3px solid rgb(177, 142, 142);
-
-    padding: 20px;
-
-    background: rgb(85, 54, 54);
-
-    border-radius: 20px;
-
+body{
+	font-family: sans-serif;
+	min-height: 100vh;
+	color: #555;
+	background-color: coral;
 }
 
-h2 {
-
-    text-align: center;
-
-    margin-bottom: 40px;
-
+form, .content{
+	max-width: 400px;
+	min-height: 500px;
+	margin: 100px auto;
+	border:  thin solid #e4e4e4;
+	padding: 40px 30px;
+	box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+	background-color: white;
 }
 
-input {
-
-    display: block;
-
-    border: 2px solid #ccc;
-
-    width: 95%;
-
-    padding: 10px;
-
-    margin: 10px auto;
-
-    border-radius: 5px;
-
+form h2{
+	margin-bottom: 10px;
 }
 
-label {
-
-    color: #888;
-
-    font-size: 18px;
-
-    padding: 10px;
-
+form h4{
+	margin-bottom: 40px;
+	font-weight: normal;
+}
+form h4 span{
+	color:  coral;
+	font-weight: bold;
+	text-decoration: underline;
+}
+form label{
+	display: block;
+	margin-bottom: 10px;
+	padding-left: 5px;
 }
 
-button {
-
-    float: right;
-
-    background: rgb(35, 174, 202);
-
-    padding: 10px 15px;
-
-    color: #fff;
-
-    border-radius: 5px;
-
-    margin-right: 10px;
-
-    border: none;
-
+form input, form textarea{
+	display: block;
+	width:  100%;
+	padding: 10px;
+	margin-bottom: 10px;
+	font-size: 16px;
+	border:  thin solid #e4e4e4;
+	margin-bottom: 30px;
 }
 
-button:hover{
-
-    opacity: .10;
-
+form select{
+	display: block;
+	width:  100%;
+	margin-bottom: 10px;
+	padding: 10px;
+	font-size: 16px;
+	border:  thin solid #e4e4e4;
+	background-color: white;
+	color: #555;
 }
 
-.error {
-
-   background: #F2DEDE;
-
-   color: #0c0101;
-
-   padding: 10px;
-
-   width: 95%;
-
-   border-radius: 5px;
-
-   margin: 20px auto;
-
+form input:focus
+{
+	outline: none;
+	border: thin solid coral;
 }
 
-h1 {
-
-    text-align: center;
-
-    color: rgb(134, 3, 3);
-
+form textarea{
+	min-height: 150px;
 }
 
-a {
-
-    float: right;
-
-    background: rgb(183, 225, 233);
-
-    padding: 10px 15px;
-
-    color: #fff;
-
-    border-radius: 10px;
-
-    margin-right: 10px;
-
-    border: none;
-
-    text-decoration: none;
-
+form input::placeholder{
+	font-size: 16px;
 }
 
-a:hover{
+form button{
+	background: #32749a;
+	color: white;
+	border: none;
+	padding: 15px;
+	width:  100%;
+	font-size: 16px;
+	margin-top: 20px;
+	cursor: pointer;
+}
 
-    opacity: .7;
+form button:active{
+	background-color: green;
+}
+
+.error{
+	margin-top: 30px;
+	color: #af0c0c;
+}
+
+.success{
+	margin-top: 30px;
+	color: green;
+}
+
+.content header a{
+	text-decoration: none;
+	padding: 6px 20px;
+	border: thin solid #d4d4d4;
+	font-size: 14px;
+	font-weight: normal;
+	background: #e4e4e4;
+	color: #555;
+}
+
+ .content header{
+	 display: flex;
+	 justify-content: space-between;
+	 align-items: center;
+	 border-bottom: thin solid #e4e4e4;
+	 padding-bottom: 30px;
+ }
+
+.content main{
+	margin-top: 50px;
+}
+
+.content main h3{
 
 }
