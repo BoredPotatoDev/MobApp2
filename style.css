@@ -59,7 +59,7 @@ form select{
 	font-size: 16px;
 	border:  thin solid #e4e4e4;
 	background-color: white;
-	color: #555;
+	color: rgb(11, 11, 11);
 }
 
 form input:focus
