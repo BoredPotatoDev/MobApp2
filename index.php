@@ -33,5 +33,13 @@
 
         <p class="error"><?php echo @$user->error ?></p>
         <p class="success"><?php echo @$user->success ?></p>
+
+        <p><center>Already have an account?</center></p>
+        <input type="button" value="Log in" name="loginBtn"onClick="redirectLogin()"/>
+        <script>
+            function redirectLogin() {
+            window.location.href="login.php";
+            }
+    </form>
 </body>
 </html>
