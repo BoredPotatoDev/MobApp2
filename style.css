@@ -9,7 +9,7 @@ body{
 	font-family: sans-serif;
 	min-height: 100vh;
 	color: #555;
-	background-color: rgb(197, 19, 170);
+	background-color: rgb(37, 143, 175);
 }
 
 form, .content{
@@ -19,7 +19,7 @@ form, .content{
 	border:  thin solid #e4e4e4;
 	padding: 40px 30px;
 	box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-	background-color: white;
+	background-color: rgb(200, 223, 229);
 }
 
 form h2{
