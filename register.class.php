@@ -43,7 +43,7 @@ class RegisterUser{
         }
     }
 
-    private function usernameExist(){
+    private function usernameExists(){
         foreach($this->stored_users as $user){
             if($this->FamilyName == $user['Family Name']){
                 $this->error = "You Already Have an Account!";
@@ -54,7 +54,7 @@ class RegisterUser{
     }
 
     private function insertUser(){
-        if($this->usernameExist() == FALSE){
+        if($this->usernameExists() == FALSE){
             array_push($this->stored_users, $this->new_user);
             if(file_put_contents($this->storage, json_encode($this->stored_users, JSON_PRETTY_PRINT))){
                 return $this->success = "You have been added to the database";
