@@ -9,7 +9,7 @@ body{
 	font-family: sans-serif;
 	min-height: 100vh;
 	color: #555;
-	background-color: rgb(243, 252, 254);
+	background-color: rgb(147, 196, 210);
 }
 
 form, .content{
@@ -93,6 +93,7 @@ form button:active{
 
 .error{
 	margin-top: 30px;
+	font-weight: bold;
 	color: #af0c0c;
 }
 
