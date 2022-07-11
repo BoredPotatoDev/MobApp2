@@ -123,6 +123,13 @@ form button:active{
 	margin-top: 50px;
 }
 
-.content main h3{
-
+input[type=button]{
+	background: #32749a;
+	color: white;
+	border: none;
+	padding: 15px;
+	width:  100%;
+	font-size: 16px;
+	margin-top: 20px;
+	cursor: pointer;
 }
