@@ -18,7 +18,7 @@
 <body>
     <form action="" method="post" enctype="multipart/form-data" autocomplete="off">
         <h2>Register form</h2>
-        <h4>All fields are <span>required</span></h4>
+        <h4>All Fields are <span>Required</span></h4>
 
         <label>Family Name</label>
         <input type="text" name="FN">
