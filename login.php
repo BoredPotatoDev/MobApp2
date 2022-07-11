@@ -30,6 +30,14 @@
 
 		<p class="error"><?php echo @$user->error ?></p>
 		<p class="success"><?php echo @$user->success ?></p>
+
+		<p><center>New user?</center></p>
+        <input type="button" value="Register" name="regBtn"onClick="redirectRegister()"/>
+        <script>
+            function redirectRegister() {
+            window.location.href="index.php";
+            }
+        </script>
 	</form>
 
 </body>
