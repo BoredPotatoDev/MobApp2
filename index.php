@@ -40,6 +40,7 @@
             function redirectLogin() {
             window.location.href="login.php";
             }
+        </script>
     </form>
 </body>
 </html>
