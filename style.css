@@ -65,7 +65,7 @@ form select{
 form input:focus
 {
 	outline: none;
-	border: thin solid coral;
+	border: thin solid rgb(0, 136, 255);
 }
 
 form textarea{
