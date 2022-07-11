@@ -29,21 +29,9 @@
         <label>Date of Birth</label>
         <input type="date" name="DoB">
 
-        <button type="submit" name="register">Register</button>
-    
+        <button type="submit" name="submit">Register</button>
+
         <p class="error"><?php echo @$user->error ?></p>
         <p class="success"><?php echo @$user->success ?></p>
-
-        <p><center>Already have an account?</center></p>
-        <input type="button" value="Log in" name="loginBtn"onClick="redirectLogin()"/>
-        <script>
-            function redirectLogin() {
-            window.location.href="login.php";
-            }
-        </script>
-    </form>
-
-        
-           
 </body>
 </html>
