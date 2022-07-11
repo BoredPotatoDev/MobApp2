@@ -31,8 +31,8 @@
 
         <button type="submit" name="submit">Register</button>
 
-        <p class="error"><center><?php echo @$user->error ?></center></p>
-        <p class="success"><center><?php echo @$user->success ?></center></p>
+        <p class="error"><?php echo @$user->error ?></p>
+        <p class="success"><?php echo @$user->success ?></p>
 
         <p><center>Already have an account?</center></p>
         <input type="button" value="Log in" name="loginBtn"onClick="redirectLogin()"/>
