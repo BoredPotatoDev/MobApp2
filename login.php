@@ -15,7 +15,7 @@
 <body>
 	<form action="" method="post" enctype="multipart/form-data" autocomplete="off">
 		<h2>Login form</h2>
-		<h4>All Fields are <span>Required</span></h4>
+		<h4>All Fields are <span>required</span></h4>
 
 		<label>Family Name</label>
 		<input type="text" name="FN">
