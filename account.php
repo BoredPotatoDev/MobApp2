@@ -26,7 +26,7 @@
 			<h2>Welcome <?php echo $_SESSION['user']; ?><h2>
 			<a href="?logout">Log out</a>	
 		</header>
-		<p><img src = "KEKW.jpg"></p>
+		<p><center><img src = "KEKW.jpg"></center></p>
 	</div>
 
 </body>
