@@ -1,5 +1,4 @@
 <?php require("login.class.php") ?>
-
 <?php 
 	if(isset($_POST['submit'])){
 		$user = new LoginUser($_POST['FN'], $_POST['SN'], $_POST['DoB']);
@@ -14,7 +13,7 @@
 	<title>Log in form</title>
 </head>
 <body>
-	<form action="account.php" method="post" enctype="multipart/form-data" autocomplete="off">
+	<form action="" method="post" enctype="multipart/form-data" autocomplete="off">
 		<h2>Login form</h2>
 		<h4>All Fields are <span>Required</span></h4>
 
@@ -31,14 +30,6 @@
 
 		<p class="error"><?php echo @$user->error ?></p>
 		<p class="success"><?php echo @$user->success ?></p>
-
-		<p><center>New user?</center></p>
-        <input type="button" value="Register" name="regBtn"onClick="redirectRegister()"/>
-        <script>
-            function redirectRegister() {
-            window.location.href="index.php";
-            }
-        </script>
 	</form>
 
 </body>
