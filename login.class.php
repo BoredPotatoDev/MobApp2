@@ -22,12 +22,12 @@ class LoginUser{
 
     private function login(){
         foreach($this->stored_users as $user) {
-            if($user['Family Name'] == $this->FamilyName and $user['Student Number'] == $this->StudentNumber){
+            if($user['Family Name'] == $this->FamilyName and $user['Student Number'] == $this->StudentNumber and $user['Date of Birth'] == $this->DateofBirth){
                     session_start();
                     $_SESSION['user'] = $this->FamilyName;
                     header("location: account.php"); exit();
                 }
         }
-        return $this->error = "One of you Information is Incorrect. Double check your information.";
+        return $this->error = "One of your Information is Incorrect. Double check your information.";
     }
 }
